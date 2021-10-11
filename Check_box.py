@@ -74,6 +74,7 @@ class Frame(wx.Frame):
         panel.SetSizer(box)
         panel.Layout()
 
+
     def OnClose(self, event):
         dlg = wx.MessageDialog(self,
                                "Do you really want to close this application?",
@@ -82,6 +83,7 @@ class Frame(wx.Frame):
         dlg.Destroy()
         if result == wx.ID_OK:
             self.Destroy()
+
 
     def OnAbout(self, event):
         dlg = AboutBox()
