@@ -53,7 +53,8 @@ class Frame(wx.Frame):
 
 
 
-app = wx.App(redirect=True)  # Error messages go to popup window
+# app = wx.App(redirect=True)  # Error messages go to popup window
+app = wx.App()
 top = Frame("MON")
 top.Show()
 app.MainLoop()
