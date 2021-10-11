@@ -12,7 +12,7 @@ import ETH_Test
 class Frame(wx.Frame):
     def __init__(self, title):
         wx.Frame.__init__(self, None, title=title, pos=(150, 150), size=(350, 200))
-        self.Bind(wx.EVT_CLOSE, self.OnClose)
+        self.Bind(wx.EVT_CLOSE, self.OnClose1)
 
         panel = wx.Panel(self)
         box = wx.BoxSizer(wx.VERTICAL)
@@ -47,10 +47,30 @@ class Frame(wx.Frame):
         dialog.Destroy()
         if result == wx.ID_YES:
             print("Yes")
+            print("Yes")
+            print("Yes")
+            print("Yes")
+            print("Yes")
+            print("Yes")
             self.Destroy()
         else:
             print("No")
+            print("No")
+            print("No")
+            print("No")
+            print("No")
+            print("No")
+            self.Destroy()
 
+
+    def OnClose1(self, event):
+        dialog = wx.MessageDialog(None, "Do You Want To Exit?", "Close", wx.YES_NO | wx.ICON_QUESTION)
+        result = dialog.ShowModal()
+        dialog.Destroy()
+        if result == wx.ID_YES:
+            self.Destroy()
+        else:
+            self.Destroy()
 
 
 # app = wx.App(redirect=True)  # Error messages go to popup window
